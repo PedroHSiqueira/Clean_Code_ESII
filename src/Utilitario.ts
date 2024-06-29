@@ -12,7 +12,7 @@ export class Funcionalidades {
     return Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
   }
 
-  public static SelecaoPokemon() {
+  public static SelecaoPokemonInicial() {
     console.clear();
     console.log(Estetica.apresentacao());
     console.log(Estetica.selecao());
@@ -51,7 +51,7 @@ export class Funcionalidades {
       personagem.pokemon.nivel += 1;
     } else if (personagem.pokemon.vida <= 0) {
       console.log(Estetica.derrota());
-      console.log(Estetica.finalizacao());
+      console.log(Estetica.finalizacaoJogo());
     }
   }
 }
@@ -66,7 +66,7 @@ export class Error {
 }
 
 export class Estetica {
-  public static regras(): string {
+  public static regrasJogo(): string {
     return ` 
                            Bem vindos ao Pokemon Terminal!
       
@@ -83,7 +83,7 @@ export class Estetica {
 »»————————————————————————————————————————————————————————————————————————————————««\n`;
   }
 
-  public static nome(): string {
+  public static escolhaNomeJogador(): string {
     console.clear();
     return ` 
                    Hora de Definir qual vai ser o seu nome!
@@ -345,7 +345,7 @@ export class Estetica {
      ╬═╬═ ╬═╬═ ╬═╬═ ╬═╬═ ╬═╬═ ╬═╬═ ╬═╬═ ╬═╬═ ╬═╬═ \n`;
   }
 
-  public static informacoes(): string {
+  public static informacoesJogador(): string {
     return `
     Estatisticas Do Seu Pokémon:
 
@@ -360,7 +360,7 @@ export class Estetica {
     »»———————————————————————————————————————————————————————————————————————————««\n`;
   }
 
-  public static finalizacao(): string {
+  public static finalizacaoJogo(): string {
     return `\n
     ___  _______  _______  _______    _______  ___   __    _  _______  ___      ___   _______  _______  ______   _______ 
     |   ||       ||       ||       |  |       ||   | |  |  | ||   _   ||   |    |   | |       ||   _   ||      | |       |

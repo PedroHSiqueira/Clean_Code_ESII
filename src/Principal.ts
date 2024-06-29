@@ -1,30 +1,30 @@
 import { Batalha } from "./Batalha";
 import { Oponente, Jogador } from "./Personagem";
 import { Error, Funcionalidades, Estetica } from "./Utilitario";
-const teclado = require("prompt-sync")();
+const inputTeclado = require("prompt-sync")();
 
 export const personagem: Jogador = new Jogador();
 export const oponente: Oponente = new Oponente();
 export const batalha: Batalha = new Batalha();
 
-let option: number;
+let opcao: number;
 
 //----------------------------------------------
 // Inicio do Jogo e escolha do nome
 
-console.log(Estetica.regras());
-option = teclado("Aperte enter para começar o jogo ...");
+console.log(Estetica.regrasJogo());
+opcao = inputTeclado("Aperte enter para começar o jogo ...");
 
-console.log(Estetica.nome());
-personagem.nome = teclado(" ☛ Digite ele aqui:  ");
+console.log(Estetica.escolhaNomeJogador());
+personagem.nome = inputTeclado(" ☛ Digite ele aqui:  ");
 
 console.log(personagem.descricao());
-teclado("Aperte Enter para continuar ... ");
+inputTeclado("Aperte Enter para continuar ... ");
 
 //----------------------------------------------
 // Escolha do Pokemon Inicial
 
-console.log(Funcionalidades.SelecaoPokemon());
+console.log(Funcionalidades.SelecaoPokemonInicial());
 
 //----------------------------------------------
 //Batalha
@@ -33,56 +33,56 @@ console.log(batalha.Iniciar());
 
 while (personagem.pokemon.vida > 0 && oponente.pokemon.vida > 0) {
   console.log(Estetica.ataques());
-  option = +teclado("Movimento Escolhido ☛ ");
-  batalha.atacar(Number(option));
+  opcao = +inputTeclado("Movimento Escolhido ☛ ");
+  batalha.atacar(Number(opcao));
 }
 
 //Tela de Vitoria e Derrota
 Funcionalidades.VerificaVida();
 
 //------------------------------------------------
-teclado("Aperte Enter para continuar ... ");
+inputTeclado("Aperte Enter para continuar ... ");
 
 while (personagem.pokemon.vida > 0) {
   console.log(Estetica.menuOpcoes());
-  option = +teclado("Opção Selecionada: ");
+  opcao = +inputTeclado("Opção Selecionada: ");
 
-  while (option < 1 || option > 4 || isNaN(option)) {
+  while (opcao < 1 || opcao > 4 || isNaN(opcao)) {
     console.log(Error.VerificaSelecao());
-    option = +teclado("☛ Escolha uma opção: ");
+    opcao = +inputTeclado("☛ Escolha uma opção: ");
   }
 
-  switch (option) {
+  switch (opcao) {
     case 1:
       oponente.pokemon.vida = 35;
       console.log(batalha.Iniciar());
 
       while (personagem.pokemon.vida > 0 && oponente.pokemon.vida > 0) {
         console.log(Estetica.ataques());
-        option = +teclado("Movimento Escolhido ☛ ");
-        batalha.atacar(option);
+        opcao = +inputTeclado("Movimento Escolhido ☛ ");
+        batalha.atacar(opcao);
       }
 
       Funcionalidades.VerificaVida();
 
-      teclado("Pressione enter para continuar ... ");
+      inputTeclado("Pressione enter para continuar ... ");
       break;
 
     case 2:
       console.clear();
-      console.log(Funcionalidades.SelecaoPokemon());
+      console.log(Funcionalidades.SelecaoPokemonInicial());
       break;
 
     case 3:
       console.clear();
-      console.log(Estetica.informacoes());
-      teclado("Pressione enter para continuar ... ");
+      console.log(Estetica.informacoesJogador());
+      inputTeclado("Pressione enter para continuar ... ");
       break;
 
     case 4:
       personagem.pokemon.vida = 0;
       console.clear();
-      console.log(Estetica.finalizacao());
+      console.log(Estetica.finalizacaoJogo());
       break;
   }
 }
