@@ -13,6 +13,14 @@ Foi Realizada a refatoração do codigo baseado em um projeto realizado no 2° s
 
 Criação de uma função de numero aleatório, para evitar a repetição de código que ocorria entre os arquivos
 
+Variaveis
+<img width="730" alt="image" src="../images/variaveis.png">
+
+Alterações:
+
+Regra -> RegrasJogo()
+nome -> EsescolhaNomeJogador()
+
 ## Corrige
 Caso alguma correção tenha sido feita, citar aqui.
 
