@@ -9,24 +9,19 @@ Foi Realizada a refatoração do codigo baseado em um projeto realizado no 2° s
 
 
 ## Ajustes
+
+### Função
 <img width="730" alt="image" src="../images/Random.png">
 
 Criação de uma função de numero aleatório, para evitar a repetição de código que ocorria entre os arquivos
 
-Variaveis
+### Variaveis
 <img width="730" alt="image" src="../images/variaveis.png">
-
+<br/>
 Alterações:
 
-Regra -> RegrasJogo()
-nome -> EsescolhaNomeJogador()
-
-## Corrige
-Caso alguma correção tenha sido feita, citar aqui.
-
-Ex.:
-- Nada relevante
-
+Regra -> RegrasJogo( )<br/>
+nome -> EsescolhaNomeJogador( )
 
 ## Tipo de mudança (marcar as alternativas que se encaixam)
 - [x] Nova Funcionalidade
