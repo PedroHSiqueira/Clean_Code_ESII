@@ -29,7 +29,7 @@ console.log(Funcionalidades.SelecaoPokemonInicial());
 //----------------------------------------------
 //Batalha
 
-console.log(batalha.Iniciar());
+console.log(batalha.IniciarBatalha());
 
 while (personagem.pokemon.vida > 0 && oponente.pokemon.vida > 0) {
   console.log(Estetica.ataques());
@@ -55,7 +55,7 @@ while (personagem.pokemon.vida > 0) {
   switch (opcao) {
     case 1:
       oponente.pokemon.vida = 35;
-      console.log(batalha.Iniciar());
+      console.log(batalha.IniciarBatalha());
 
       while (personagem.pokemon.vida > 0 && oponente.pokemon.vida > 0) {
         console.log(Estetica.ataques());
