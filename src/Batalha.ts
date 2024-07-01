@@ -7,7 +7,7 @@ export let rodada: number = 1;
 let option: number;
 
 export class Batalha {
-  public Iniciar(): void {
+  public IniciarBatalha(): void {
     console.clear();
     console.log(Estetica.confirmacao());
     console.log(oponente.descricao());
