@@ -21,13 +21,7 @@ Criação de uma função de numero aleatório, para evitar a repetição de có
 Alterações:
 
 Regra -> RegrasJogo( )<br/>
-nome -> EsescolhaNomeJogador( )<br/>
-
-<img width="730" alt="image" src="../images/Batalha.png">
-<br/>
-Alterações:
-
-iniciar -> iniciarBatalha( )<br/>
+nome -> EsescolhaNomeJogador( )
 
 ## Tipo de mudança (marcar as alternativas que se encaixam)
 - [x] Nova Funcionalidade
